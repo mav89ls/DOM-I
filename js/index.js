@@ -37,30 +37,67 @@ const siteContent = {
     },
 };
 
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 
+//Navigation
 
-
-// IMAGES under here
-
-let ctaImg = document.querySelector('#cta-img');
-ctaImg.src = siteContent["cta"]["img-src"];
-
-document.querySelector('#middle-img').src = siteContent["main-content"]["middle-img-src"];
-
-
-
+let navText = document.querySelectorAll("nav a")
+navText[0].textContent = siteContent["nav"]["nav-item-1"];
+navText[1].textContent = siteContent["nav"]["nav-item-2"];
+navText[2].textContent = siteContent["nav"]["nav-item-3"];
+navText[3].textContent = siteContent["nav"]["nav-item-4"];
+navText[4].textContent = siteContent["nav"]["nav-item-5"];
+navText[5].textContent = siteContent["nav"]["nav-item-6"];
 
 
 
-// TOOLBAR NAV under here
+//CTA
 
-const tagElements = Array.from(document.getElementsByTagName('a'));
+let headText = document.querySelector("h1")
+headText.textContent = siteContent["cta"]["h1"]
 
-for (let i = 0; i < tagElements.length; i++) {
-    tagElements[i].innerText = siteContent["nav"][`nav-item-${i+1}`];
-}
+let headerImg = document.getElementById("cta-img")
+headerImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let ctaButton = document.querySelector("button")
+ctaButton.textContent = siteContent["cta"]["button"]
+
+
+
+//Main Content
+
+let middleHeaders = document.querySelectorAll(".main-content h4");
+middleHeaders[0].textContent = siteContent["main-content"]["features-h4"]
+middleHeaders[1].textContent = siteContent["main-content"]["about-h4"]
+middleHeaders[2].textContent = siteContent["main-content"]["services-h4"]
+middleHeaders[3].textContent = siteContent["main-content"]["product-h4"]
+middleHeaders[4].textContent = siteContent["main-content"]["vision-h4"]
+
+let middleText = document.querySelectorAll(".main-content p")
+middleText[0].textContent = siteContent["main-content"]["features-content"]
+middleText[1].textContent = siteContent["main-content"]["about-content"]
+middleText[2].textContent = siteContent["main-content"]["services-content"]
+middleText[3].textContent = siteContent["main-content"]["product-content"]
+middleText[4].textContent = siteContent["main-content"]["vision-content"]
+
+let sectionImg = document.querySelector(".main-content img")
+sectionImg.setAttribute("src", siteContent["main-content"]["middle-img-src"])
+
+
+
+
+//Contact Content
+
+let contactHeader = document.querySelector(".contact h4")
+contactHeader.textContent = siteContent["contact"]["contact-h4"]
+
+let contactText = document.querySelectorAll(".contact p")
+contactText[0].textContent = siteContent["contact"]["address"]
+contactText[1].textContent = siteContent["contact"]["phone"]
+contactText[2].textContent = siteContent["contact"]["email"]
