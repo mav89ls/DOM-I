@@ -101,3 +101,14 @@ let contactText = document.querySelectorAll(".contact p")
 contactText[0].textContent = siteContent["contact"]["address"]
 contactText[1].textContent = siteContent["contact"]["phone"]
 contactText[2].textContent = siteContent["contact"]["email"]
+
+
+//Footer
+
+let copyR = document.querySelector("footer p")
+copyR.textContent = siteContent["copyright"]
+
+
+
+//Change Text to Green
+navText.forEach(anchor => anchor.style.color = "green")
