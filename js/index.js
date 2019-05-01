@@ -112,3 +112,21 @@ copyR.textContent = siteContent["copyright"]
 
 //Change Text to Green
 navText.forEach(anchor => anchor.style.color = "green")
+
+
+// Add New Items 
+
+let navAdd = document.querySelector('nav');
+
+let home = document.createElement("a")
+home.textContent = "Home"
+home.href = "#"
+home.style.color = "green"
+
+let testimonials = document.createElement("a")
+testimonials.textContent = "Testimonials"
+testimonials.href = "#"
+testimonials.style.color = "green"
+
+navAdd.prepend(home)
+navAdd.append(testimonials)
